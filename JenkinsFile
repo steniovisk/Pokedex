@@ -6,6 +6,10 @@ pipeline{
             steps{
                 echo 'inciando pipeline'
             }
+
+            steps1{
+                echo 'step1'
+            }
         }
     }
 }
