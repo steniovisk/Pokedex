@@ -2,13 +2,11 @@ pipeline{
     agent any
 
     stages{
-        stage('inicial'){
+        stage('build image'){
             steps{
-                echo 'inciando pipeline'
-            }
-
-            steps1{
-                echo 'step1'
+                script{
+                    dockerapp = docker.build('signacio\Projetos-Faculdade\Pokedex', '-f ./src/Dockerfile ./src')
+                }
             }
         }
     }
