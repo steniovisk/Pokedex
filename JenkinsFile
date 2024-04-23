@@ -6,6 +6,7 @@ pipeline{
             steps{
                 script{
                     dockerapp = docker.build('signacio\Projetos-Faculdade\Pokedex', '-f ./src/Dockerfile ./src')
+                    
                 }
             }
         }
